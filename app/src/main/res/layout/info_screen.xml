@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@color/yellow"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/logo"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:paddingTop="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/intro"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="#ffffff"
+        android:src="@mipmap/start"
+        android:id="@+id/startButton"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="10"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="0dp">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:text="@string/dontAskAgain"
+            android:paddingTop="10dp"
+            android:textSize="16sp"
+            android:id="@+id/checkbox"
+            android:textColor="#999999"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_weight="5"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/iRestoreInfoBtn"
+        android:text="@string/whatIsIrestore"
+        android:textSize="14sp"
+        android:layout_height="0dp" />
+</LinearLayout>
+

@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/camera"
+            android:layout_weight="25"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/camera"
+            android:layout_weight="25"/>
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:id="@+id/geoLocationMapLayout"
+        android:layout_weight="50"
+        >
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.MapFragment"/>
+
+        <ImageView
+            android:id="@+id/transparent_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="#00000000" />
+
+    </FrameLayout>
+    </LinearLayout>
+    </LinearLayout>

@@ -1,0 +1,437 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:background="@color/white"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="20"
+        android:background="@color/textColorLight"
+        android:layout_height="0dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/textColorLight"
+            android:weightSum="100"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="20"
+                android:src="@mipmap/camera"
+                />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/camera" android:layout_weight="20"
+                android:layout_margin="10dp"
+                />
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/geoLocationMapLayout"
+            android:layout_weight="60"
+            >
+            <fragment
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:name="com.google.android.gms.maps.MapFragment"/>
+
+            <ImageView
+                android:id="@+id/transparent_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="#00000000" />
+
+        </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80"
+        android:fillViewport="true"
+        android:isScrollContainer="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+
+                >
+
+                <TextView
+                    style="@style/TextStyleDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:id="@+id/addressLabel"
+                    android:text="Address" />
+
+                <EditText
+                    style="@style/TextStyleLight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="2"
+                    android:id="@+id/addressValue"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="address"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+
+
+                >
+
+                <TextView
+                    style="@style/TextStyleDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:id="@+id/meterNoLabel"
+                    android:text="Meter Number" />
+
+                <EditText
+                    style="@style/TextStyleLight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="2"
+                    android:id="@+id/meterNoValue"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="meter number"
+
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="#95989A" />
+
+            <RelativeLayout
+                android:id="@+id/layoutProblemType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/problemTypeLabel"
+                    style="@style/TextStyleDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/problemType" />
+
+                <TextView
+                    android:id="@+id/selectedProblemType"
+                    style="@style/TextStyleLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/problemTypeLabel"
+                    android:hint="Corrosion,Meter Protection"
+
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/selectedProblemType"
+                    android:layout_marginTop="10dp"
+                    android:background="#95989A" />
+
+                <ImageView
+                    android:id="@+id/arrowImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10dp"
+
+                    android:src="@mipmap/indicator"
+                    android:textColor="#666666" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutResponsiblePary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/respPartyLabel"
+                    style="@style/TextStyleDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/responsibleParty" />
+
+                <TextView
+                    android:id="@+id/respPartyType"
+                    style="@style/TextStyleLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/respPartyLabel"
+                    android:text="CMS" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/respPartyType"
+                    android:layout_marginTop="10dp"
+                    android:background="#95989A"/>
+
+                <ImageView
+                    android:id="@+id/arrowImg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10dp"
+
+                    android:src="@mipmap/indicator"
+                    android:textColor="#666666" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutPriority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/priorityLabel"
+                    style="@style/TextStyleDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/priority" />
+
+                <TextView
+                    android:id="@+id/priorityText"
+                    style="@style/TextStyleLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/priorityLabel"
+                    android:hint="medium" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/priorityText"
+                    android:layout_marginTop="10dp"
+                    android:background="#95989A"/>
+
+                <ImageView
+                    android:id="@+id/arrowImg2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10dp"
+
+                    android:src="@mipmap/indicator"
+                    android:textColor="#666666" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/problemFixedChkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:layout_margin="10dp"
+                android:text="Problem Fixed?"
+                style="@style/TextStyleDark"
+                android:drawableRight="@drawable/custom_checkbox"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+
+                android:background="#95989A" />
+            <CheckBox
+                android:id="@+id/digSafeChkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:layout_margin="10dp"
+                android:text="Digsafe Required"
+                style="@style/TextStyleDark"
+
+                android:drawableRight="@drawable/custom_checkbox"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#95989A" />
+
+            <CheckBox
+                android:id="@+id/preCompletedChkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:layout_margin="10dp"
+                android:text="Pre-mark Completed?"
+                style="@style/TextStyleDark"
+                android:drawableRight="@drawable/custom_checkbox"
+                />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="#95989A" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/descriptionLabel"
+                style="@style/TextStyleDark"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Description" />
+
+            <EditText
+                android:id="@+id/descriptionText"
+                style="@style/TextStyleLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Corrosion found on union joint causing leak. Referred to technician"
+                android:background="@null" />
+
+        </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#95989A" />
+
+                <TextView
+                    android:id="@+id/customerInfoLabel"
+                    style="@style/TextStyleDark"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Customer Information" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+
+                >
+
+                <TextView
+                    style="@style/TextStyleDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:id="@+id/nameLabel"
+                    android:text="Name" />
+
+                <EditText
+                    android:id="@+id/nameValue"
+                    style="@style/TextStyleLight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="name"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal"
+
+
+                >
+
+                <TextView
+                    style="@style/TextStyleDark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/phoneLabel"
+                    android:layout_margin="10dp"
+                    android:text="Phone No." />
+
+                <EditText
+                    style="@style/TextStyleLight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="2"
+                    android:id="@+id/phoneValue"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="phone number"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

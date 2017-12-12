@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="15"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/textColorLight"
+        android:layout_height="0dp">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:layout_margin="20dp"
+
+        android:text="I would like notifications for the following events:"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:layout_margin="20dp"
+
+            android:layout_weight="5"
+           />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="8"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:layout_height="0dp">
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yellow card submitted"/>
+        <view
+            android:layout_width="match_parent"
+            android:background="#000000"
+            android:layout_height="1dp">
+
+        </view>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="8"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:layout_height="0dp">
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yellow card updated"/>
+        <view
+            android:layout_width="match_parent"
+            android:background="#000000"
+            android:layout_height="1dp">
+
+        </view>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="15"
+        android:background="@color/textColorLight"
+        android:layout_height="0dp">
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="8"
+        android:layout_height="0dp">
+
+    </LinearLayout><LinearLayout
+    android:layout_width="match_parent"
+    android:layout_weight="8"
+    android:layout_height="0dp">
+
+</LinearLayout><LinearLayout
+    android:layout_width="match_parent"
+    android:layout_weight="8"
+    android:layout_height="0dp">
+
+</LinearLayout><LinearLayout
+    android:layout_width="match_parent"
+    android:layout_weight="30"
+    android:background="@color/textColorLight"
+    android:layout_height="0dp">
+
+</LinearLayout>
+
+
+
+
+</LinearLayout>
